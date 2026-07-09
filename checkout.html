@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Checkout | Pure Things</title>
+<meta content="Checkout your Pure Things cart: indie skincare made in Milan, colorful packaging, English skincare catalogue, and real-skin rituals." name="description"/>
+<link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+<header class="site-header">
+<a class="brand-mark" href="index.html"><img alt="Pure Things" src="assets/pure-things-monogram.png"/></a>
+<nav class="nav">
+<a class="nav-yellow" href="story.html">Story</a>
+<a class="nav-pink" href="manifesto.html">Manifesto</a>
+<a class="nav-blue" href="products.html">Catalogue</a>
+<a class="nav-white" href="index.html#contact">Contact</a>
+<button aria-label="Open cart" class="cart-toggle blue-button" type="button">Cart · 0</button>
+</nav>
+</header>
+<main class="checkout-page">
+<section class="checkout-hero">
+<p class="eyebrow">Almost yours</p>
+<h1>Checkout, but make it Pure Things.</h1>
+<p class="hero-text">Review your cart, add your details, and place the demo order. Payment can be connected later with Stripe, Shopify, or your provider.</p>
+<div class="checkout-color-tags"><span class="yellow-tag">made in Milan skincare</span><span class="pink-tag">real skin ritual</span><span class="blue-tag">cart energy</span><span class="yellow-tag">not another beige checkout</span></div></section>
+<section class="checkout-grid">
+<div class="checkout-form-card">
+<h2>Shipping details</h2>
+<form id="checkout-form">
+<label>Full name<input name="name" placeholder="Your name" required=""/></label>
+<label>Email<input name="email" placeholder="you@email.com" required="" type="email"/></label>
+<label>Address<input name="address" placeholder="Street and number" required=""/></label>
+<div class="form-row">
+<label>City<input name="city" placeholder="Milan" required=""/></label>
+<label>ZIP<input name="zip" placeholder="20100" required=""/></label>
+</div>
+<label>Country<input name="country" placeholder="Italy" required=""/></label>
+<button class="checkout-submit blue-button" type="submit">Place order</button>
+</form>
+<p class="checkout-note">Demo checkout: this saves no payment data. Connect Stripe/Shopify later for real payments.</p>
+</div>
+<aside class="checkout-summary"><div class="cart-mood-card">Tiny rituals, big feelings.</div>
+<h2>Your cart</h2>
+<div id="checkout-items"></div>
+<div class="checkout-total-row"><span>Subtotal</span><strong id="checkout-subtotal">€0</strong></div>
+<div class="checkout-total-row"><span>Shipping</span><strong>Calculated later</strong></div>
+<div class="checkout-total-row grand"><span>Total today</span><strong id="checkout-total">€0</strong></div>
+<a class="continue-shopping blue-pill" href="products.html">Keep shopping</a>
+</aside>
+</section>
+</main>
+<footer class="site-footer">
+<strong>PURE THINGS</strong>
+<p>Made in Milan for real skin moods.</p>
+</footer>
+<script src="cart.js"></script>
+</body>
+</html>
